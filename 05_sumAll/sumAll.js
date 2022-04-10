@@ -9,8 +9,10 @@ const sumAll = function(num1, num2) {
         lowNum = num2;
         highNum = num1;
     }
-    for(i = lowNum; 1 <= highNum; i++){
-        total += i;
+    for(i = lowNum; i <= highNum; i++){
+        if(i < 0 || typeof(lowNum) !== 'number' || typeof(highNum) !== 'number'){
+            return 'ERROR';
+        } total += i;
     } return total;
 };
 
